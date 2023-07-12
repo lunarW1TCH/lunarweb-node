@@ -1,5 +1,4 @@
 // import 'dotenv/config';
-require('dotenv').config();
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import { createTransport } from 'nodemailer';
