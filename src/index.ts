@@ -23,21 +23,8 @@ const transporter = createTransport({
 const app = express();
 app.use(bodyParser.json());
 
-// const corsOptions: CorsOptions = {
-//   allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
-//   methods: ['GET', 'POST', 'OPTIONS'],
-//   origin: ['https://lunarweb.netlify.app/', 'https://lunarweb.dev/'],
-// };
-
-// app.options('*', cors());
-
-// app.use(cors(corsOptions));
-
 app.use((req, res, next) => {
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    'https://lunarweb.netlify.app/, https://lunarweb.dev/'
-  );
+  res.setHeader('Access-Control-Allow-Origin', 'https://lunarweb.netlify.app/');
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, PATCH, DELETE'
