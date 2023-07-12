@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 const corsOptions: CorsOptions = {
   allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
-  methods: 'POST',
+  methods: ['POST', 'OPTIONS'],
   origin: ['https://lunarweb.netlify.app/', 'https://lunarweb.dev/'],
 };
 
