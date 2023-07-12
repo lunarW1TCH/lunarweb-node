@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+// import * as dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import { createTransport } from 'nodemailer';
@@ -6,7 +6,7 @@ import { body, validationResult } from 'express-validator';
 import cors, { CorsOptions } from 'cors';
 import IMailData from './MailData';
 
-dotenv.config();
+// dotenv.config();
 
 const PORT = process.env.PORT as string;
 const MAIL_FROM = process.env.MAIL_FROM as string;
