@@ -23,15 +23,15 @@ const transporter = createTransport({
 const app = express();
 app.use(bodyParser.json());
 
-const corsOptions: CorsOptions = {
-  allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
-  methods: ['GET', 'POST', 'OPTIONS'],
-  origin: ['https://lunarweb.netlify.app/', 'https://lunarweb.dev/'],
-};
+// const corsOptions: CorsOptions = {
+//   allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
+//   methods: ['GET', 'POST', 'OPTIONS'],
+//   origin: ['https://lunarweb.netlify.app/', 'https://lunarweb.dev/'],
+// };
 
-app.options('*', cors());
+// app.options('*', cors());
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.post(
   '/mail',
