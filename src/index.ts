@@ -34,7 +34,10 @@ app.use(bodyParser.json());
 // app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://lunarweb.netlify.app/, https://lunarweb.dev/'
+  );
   res.setHeader(
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, PATCH, DELETE'
