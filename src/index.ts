@@ -30,7 +30,7 @@ const corsOptions: CorsOptions = {
   origin: ['https://lunarweb.netlify.app/', 'https://lunarweb.dev/'],
 };
 
-// app.options('*', cors());
+app.options('*', cors());
 
 app.use(cors(corsOptions));
 
