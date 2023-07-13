@@ -57,12 +57,24 @@ app.post(
         `,
       };
 
-      transporter.sendMail(mailOptions, err => {
-        if (err) {
-          console.log(err);
-          res.status(500).json({ message: 'Sending mail failed!' });
-        }
-      });
+      new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, function (error, response) {
+            if (error) {
+                reject(error)
+            } else {
+                res.status(500).json({ message: 'Sending mail failed!' });
+                resolve("email sent")
+            }
+        });
+      })
+
+
+      // transporter.sendMail(mailOptions, error => {
+      //   if (err) {
+      //     console.log(err);
+      //     res.status(500).json({ message: 'Sending mail failed!' });
+      //   }
+      // });
 
       res.json({ mailData });
     }
