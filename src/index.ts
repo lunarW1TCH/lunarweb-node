@@ -14,6 +14,7 @@ const PASS = process.env.PASS as string;
 
 const transporter = createTransport({
   service: 'outlook',
+  port: 465,
   auth: {
     user: MAIL_FROM,
     pass: PASS,
