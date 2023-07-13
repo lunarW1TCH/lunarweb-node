@@ -60,9 +60,10 @@ app.post(
       new Promise((resolve, reject) => {
       transporter.sendMail(mailOptions, function (error, response) {
             if (error) {
+                res.status(500).json({ message: 'Sending mail failed!' });
                 reject(error)
             } else {
-                res.status(500).json({ message: 'Sending mail failed!' });
+                res.json({ mailData });
                 resolve("email sent")
             }
         });
@@ -76,7 +77,6 @@ app.post(
       //   }
       // });
 
-      res.json({ mailData });
     }
   }
 );
